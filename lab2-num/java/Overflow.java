@@ -72,7 +72,7 @@ public class Overflow {
         float ns = 1;
         for (int j = 1; j <= m; j++) {
             ns = ns * n;
-            // assert ?? : "Floating-point overflow";
+            assert !Float.isInfinite(ns) : "Floating-point overflow";
             resultList.add(ns);
         }
         return resultList;
