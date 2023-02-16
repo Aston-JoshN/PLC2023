@@ -2,6 +2,10 @@
     '((fp-rounding . abitdifferent) (fp-overflow . infinity) (fp-underflow . zero) (int-overflow . verydifferent)))
     ; a list of pairs
 
+(defvar results-errors
+    '((abitdifferent . fp-rounding) (infinity . fp-overflow) (zero . fp-underflow) (verydifferent . int-overflow)))
+    ; another list of pairs
+
 (defvar errors
     (mapcar 'car errors-results))
      ; take the first element from each pair and put them in a list
@@ -36,19 +40,19 @@
     (let*
         ((line (read-line)) ;get a line as a string
          (element (read-from-string line))) ;parse the line
-        (if (errorp element) ;is element a valid error?
+        (if (resultp element) ;is element a valid error?
             ; then:
             element ;yes, return it
             ; else:
             (progn ; progn = evaluate a sequence of expressions and return the result of the last one
-                (write-line "Invalid error, please try again.")
+                (write-line "Invalid result, please try again.")
                 (get-error))))) ;start over using recursion
 
-(write-string "Known Errors: ")
-(write-string (format nil "~A~%" errors)) 
+(write-string "Known Results: ")
+(write-string (format nil "~A~%" results)) 
     ;"~%" means end of line
     ;"~A" means format a symbol / Lisp program
 
 (let ((error (get-error)))
     (write-string
-        (format nil "~A results in: ~A~%" error (error-to-result error))))
+        (format nil "~A results in: ~A~%" error (result-to-error error))))
