@@ -24,8 +24,6 @@ public class BoolFunction {
 
     public static void main(String[] args) {
         int j = getInteger();
-
         System.out.printf("Input = %d, output = %d.\n", j, ((j < 0) ? j * -1 : j)); // TASK 3.3 (b)
-
     }
 }
