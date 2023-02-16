@@ -1,29 +1,26 @@
-package org.example;
 import java.util.Scanner;
 import java.util.EnumSet;
 
-public class ErrorsEnum
-{
-    enum Error { FP_ROUNDING, FP_OVERFLOW, FP_UNDERFLOW, INT_OVERFLOW }
+public class ErrorsEnum {
+    enum Error {
+        FP_ROUNDING, FP_OVERFLOW, FP_UNDERFLOW, INT_OVERFLOW
+    }
 
-    enum Result { A_BIT_DIFFERENT, INFINITY, ZERO, VERY_DIFFERENT }
+    enum Result {
+        A_BIT_DIFFERENT, INFINITY, ZERO, VERY_DIFFERENT
+    }
 
-    private static <E extends Enum<E>> E getEnumElement(String elementTypeName, Class<E> elementType)
-    {
+    private static <E extends Enum<E>> E getEnumElement(String elementTypeName, Class<E> elementType) {
         boolean haveResult = false;
         E result = null;
         Scanner stdin = new Scanner(System.in);
 
-        while ( ! haveResult )
-        {
+        while (!haveResult) {
             System.out.print("Input " + elementTypeName + ": ");
-            try
-            {
+            try {
                 result = Enum.valueOf(elementType, stdin.next().toUpperCase());
                 haveResult = true;
-            }
-            catch (IllegalArgumentException e)
-            {
+            } catch (IllegalArgumentException e) {
                 System.out.println("Not a valid " + elementTypeName + ".");
                 stdin.nextLine(); // skip the invalid input
             }
@@ -33,8 +30,7 @@ public class ErrorsEnum
         return result;
     }
 
-    private static Result error2Result(Error e)
-    {
+    private static Result error2Result(Error e) {
         Result result = null;
 
         switch (e) {
@@ -54,8 +50,8 @@ public class ErrorsEnum
 
         return result;
     }
-    private static Error result2Error(Result r)
-    {
+
+    private static Error result2Error(Result r) {
         Error e = null;
 
         switch (r) {
@@ -75,11 +71,10 @@ public class ErrorsEnum
 
         return e;
     }
-    public static void main(String[] args)
-    {
+
+    public static void main(String[] args) {
         System.out.print("Known errors = ");
-        for (Error e : EnumSet.allOf(Error.class))
-        {
+        for (Error e : EnumSet.allOf(Error.class)) {
             System.out.print(e + " ");
         }
         System.out.println();
