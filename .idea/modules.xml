@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/lab1-intro/lab1-intro.iml" filepath="$PROJECT_DIR$/lab1-intro/lab1-intro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab2-num/lab2-num.iml" filepath="$PROJECT_DIR$/lab2-num/lab2-num.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab3-primit/lab3-primit.iml" filepath="$PROJECT_DIR$/lab3-primit/lab3-primit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab4-records/lab4-records.iml" filepath="$PROJECT_DIR$/lab4-records/lab4-records.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab5-collections/lab5-collections.iml" filepath="$PROJECT_DIR$/lab5-collections/lab5-collections.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab6-rectypes/lab6-rectypes.iml" filepath="$PROJECT_DIR$/lab6-rectypes/lab6-rectypes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab7-vars/lab7-vars.iml" filepath="$PROJECT_DIR$/lab7-vars/lab7-vars.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab8-subprg/lab8-subprg.iml" filepath="$PROJECT_DIR$/lab8-subprg/lab8-subprg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab9-sync/lab9-sync.iml" filepath="$PROJECT_DIR$/lab9-sync/lab9-sync.iml" />
+      <module fileurl="file://$PROJECT_DIR$/u10-modules/u10-modules.iml" filepath="$PROJECT_DIR$/u10-modules/u10-modules.iml" />
+    </modules>
+  </component>
+</project>
