@@ -36,18 +36,8 @@ public class ErrorsBool
     private static Result pl2PLType(Error e)
     {
         Result type = 
-            (e == Error.FP_OVERFLOW ? Result.INFINITY :
-                (e == Error.FP_UNDERFLOW ? Result.ZERO :
-                    (e == Error.FP_ROUNDING ? Result.A_BIT_DIFFERENT : 
-                        true ? Result.VERY_DIFFERENT
-                    )
-                )
-            );
-        /* 
-            !!!! Beware: The above is not a recommended programming style.
-            !!!!         It is used here only to develop understanding of
-            !!!!         functional and imperative if-then-else statements.
-        */
+            (e == Error.FP_ROUNDING ? Result.A_BIT_DIFFERENT : (e == Error.FP_UNDERFLOW ? Result.ZERO : (e == Error.FP_OVERFLOW ? Result.INFINITY : (true) ? Result.VERY_DIFFERENT)));
+
         return type;
     }
 
@@ -65,7 +55,7 @@ public class ErrorsBool
         case FP_UNDERFLOW:
             result = Result.ZERO;
             break;
-        case INT_OVERFLOW:
+        case true:
             result = Result.VERY_DIFFERENT;
             break;
         }
