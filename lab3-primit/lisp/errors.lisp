@@ -2,10 +2,6 @@
     '((fp-rounding . abitdifferent) (fp-overflow . infinity) (fp-underflow . zero) (int-overflow . verydifferent)))
     ; a list of pairs
 
-(defvar results-errors
-    '((abitdifferent . fp-rounding) (infinity . fp-overflow) (zero . fp-underflow) (verydifferent . int-overflow)))
-    ; another list of pairs
-
 (defvar errors
     (mapcar 'car errors-results))
      ; take the first element from each pair and put them in a list
