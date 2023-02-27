@@ -30,7 +30,7 @@ procedure PlayList is
     begin
     case i.variant is
         when PAUSE =>
-            put ("Pause ");
+            put ("Pause (");
             Put (i.length_secs, aft => 1, exp => 0);
             Put ("s)");
 
