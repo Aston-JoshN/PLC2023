@@ -54,16 +54,16 @@ playlist2 = [piece2, advert1]
 
 playlists = [playlist1, playlist2] -- a list of lists
 
-adsFromPlaylists = "todo" -- TASK 5.4(b)
+adsFromPlaylists = [ item | items <- playlists, item <- items, (isAdvert item) ] 
 
-shortItemLenghts1 = "todo" -- TASK 5.4(a)
+shortItemLengths1 = [item_length_secs item | item <-playlist1, not (item_length_secs item > 20)]
 
 main =
     do
     printf "playlist1 = %s\n" (show playlist1)
-    printf "lenghts1 = %s\n" (show lengths1)
+    printf "lengths1 = %s\n" (show lengths1)
     printf "playlist1noAds = %s\n" (show playlist1noAds)
-    printf "shortItemLenghts1 = %s\n" (show shortItemLenghts1)
+    printf "shortItemLengths1 = %s\n" (show shortItemLengths1)
     putStrLn ""
     printf "playlist2 = %s\n" (show playlist2)
     printf "playlists = %s\n" (show playlists)

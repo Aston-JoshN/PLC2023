@@ -80,10 +80,10 @@ playlist1noAds = [item for item in playlist1 if item.__class__ != Advert]
 
 print("playlist1noAds = %s" % playlist1noAds)
 
-shortItemLenghts1 = [
+shortItemLengths1 = [
     item.length_secs for item in playlist1 if item.length_secs < 20]
 
-print("shortItemLenghts1 = %s" % shortItemLenghts1)
+print("shortItemLengths1 = %s" % shortItemLengths1)
 
 # empty line
 print
