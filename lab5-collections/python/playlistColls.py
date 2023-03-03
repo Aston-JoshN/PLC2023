@@ -18,6 +18,10 @@ class Piece:
         l = self.length_secs
         assert 0 < l and l < 36000
 
+# Python has loose typing, which is why there's a series of assertions that must be made to make sure that the parameters are
+# accurate to how they will be used within the code, whereas Haskell has strict typing meaning that these assertions were made at the
+# time of instantiation, though they both check that the length is a positive integer between 1 and 36000
+
 
 class Product:
     def __init__(self, name, brand):
