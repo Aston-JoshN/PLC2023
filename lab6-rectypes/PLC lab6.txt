@@ -1,0 +1,39 @@
+4a 3 runs default------------------------------
+20.0028, 20.0012, 20.0014, 20.0015, 20.0019 
+Process finished with exit code 0
+Average	x =	20.00176
+
+4a process_time: 1 ----------------------------
+2.0014,2.002,2.0004,2.0004,2.0014
+Process finished with exit code 0
+Average	x =	2.00112
+
+4a process_time: 5 ----------------------------
+10.002,10.0002,10.0002,10.0012,10.0012
+Process finished with exit code 0
+Average	x =	10.00096
+
+4a process_time: 8 ---------------------------
+16.0018,16.0025,16.0024,16.0018,16.0012 
+Process finished with exit code 0
+Average	x =	16.00194
+
+4b default ------------------------------------
+10.3503,10.3473,10.3483,10.3453,10.3397
+Process finished with exit code 0
+Average	x =	10.34618
+
+4b process_time: 1 -----------------------------
+1.3545,1.3413,1.3353,1.3383,1.3397 
+Process finished with exit code 0
+Average	x =	1.34182
+
+4b process_time: 5 ----------------------------
+5.3452,5.3552,5.3568,5.3512,5.3452
+Process finished with exit code 0
+Average	x =	5.35072
+
+4b process_time: 8 ---------------------------
+8.3439,8.3432,8.3299,8.3399,8.3309 
+Process finished with exit code 0
+Average	x =	8.33756
