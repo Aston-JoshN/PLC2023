@@ -55,5 +55,9 @@ main :: IO ()
 main =
     do
     printf "playlist1 = %s\n" (show playlist1)
-    printf "lenght1 = %s\n" (show length1)
+    printf "length1 = %s\n" (show length1)
 
+-- minutes are within the scope of playlist1 only. Since Haskell has lexical scoping similar to python, it does not matter that minutes are used before they are declared
+-- so long as they are used within the same block
+
+-- the scope of item within line 51 lasts throughout the entirety of the foreach loop and is then set as the value for length1 and destroyed.

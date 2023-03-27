@@ -77,6 +77,12 @@ public class PlaylistVars {
 
         System.out.printf("length1 = %.2f", length1);
 
+        // The float variable "length1" is contained within the scope of main
+        // once length1 is declared, it will stay in memory until the program ends
+        // the lifetime of the item variable declared on line 74 is only for the
+        // lifetime of a single run of the for loop.
+        // This variable is only a reference to the original variables that have been
+        // declared before it as they are tagged as final
         System.out.println();
-   }
+    }
 }
